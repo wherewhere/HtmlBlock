@@ -1,0 +1,11 @@
+{
+  "version": "7.1.3",
+  "nugetPackageVersion": {
+    "semVer": 2
+  },
+  "cloudBuild": {
+    "buildNumber": {
+      "enabled": false
+    }
+  }
+}

@@ -1,0 +1,20 @@
+<Project>
+
+  <PropertyGroup>
+    <!-- Code CS8002 is a warning for strong named -> non-strong-named reference. This is valid for platforms other than .NET Framework (and is needed for the UWP targets. -->
+    <NoWarn>$(NoWarn);CS8002</NoWarn>
+    <!-- For including default @(Page) and @(Resource) items via 'MSBuild.Sdk.Extras' Sdk package. Also provides up to date check and file nesting -->
+    <ExtrasEnableDefaultXamlItems>true</ExtrasEnableDefaultXamlItems>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <EnableXBindDiagnostics>false</EnableXBindDiagnostics>
+    <EnableTypeInfoReflection>false</EnableTypeInfoReflection>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);_IncludeDesignToolsInPackage</TargetsForTfmSpecificBuildOutput>
+    <IncludeDesignToolsBuildOutput Condition="'$(IncludeDesignToolsBuildOutput)' == ''">$(IncludeBuildOutput)</IncludeDesignToolsBuildOutput>
+  </PropertyGroup>
+
+</Project>
