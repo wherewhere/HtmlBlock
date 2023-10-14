@@ -1,8 +1,8 @@
 # HtmlBlock
 A control to parse and render markdown for UWP. Base on the [HtmlBlock](https://github.com/wasteam/waslibs/tree/master/src/AppStudio.Uwp/Controls/HtmlBlock) control of [Windows App Studio](https://github.com/wasteam/waslibs).
 
-[![Issues](https://img.shields.io/github/issues/wherewhere/Enchants-Order.svg?label=Issues&style=flat-square)](https://github.com/wherewhere/HtmlBlock/issues "Issues")
-[![Stargazers](https://img.shields.io/github/stars/wherewhere/Enchants-Order.svg?label=Stars&style=flat-square)](https://github.com/wherewhere/HtmlBlock/stargazers "Stargazers")
+[![Issues](https://img.shields.io/github/issues/wherewhere/HtmlBlock.svg?label=Issues&style=flat-square)](https://github.com/wherewhere/HtmlBlock/issues "Issues")
+[![Stargazers](https://img.shields.io/github/stars/wherewhere/HtmlBlock.svg?label=Stars&style=flat-square)](https://github.com/wherewhere/HtmlBlock/stargazers "Stargazers")
 
 ## Support Platform
 - UAP 10.0.10240.0
@@ -39,7 +39,9 @@ A control to parse and render markdown for UWP. Base on the [HtmlBlock](https://
                     TextWrapping="Wrap" />
             </controls:TwoPaneView.Pane1>
             <controls:TwoPaneView.Pane2>
-                <htmlblock:TextBlockEx Margin="16" Text="{x:Bind TextBox.Text, Mode=OneWay}" />
+                <htmlblock:TextBlockEx
+                    Margin="16"
+                    Text="{x:Bind TextBox.Text, Mode=OneWay}" />
             </controls:TwoPaneView.Pane2>
         </controls:TwoPaneView>
         <CommandBar
